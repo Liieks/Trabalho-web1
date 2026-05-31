@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Contato</title>
+    <link rel="stylesheet" href="styleR.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>☣ Resident Evil Fan Site</h1>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="personagens.html">Personagens</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div id="layout-contato">
+
+            <section class="secao-formulario">
+                <h2>Entre em Contato</h2>
+                <p>Tem alguma sugestao ou encontrou algum erro no site? Me manda uma mensagem!</p>
+
+                <form id="meu-formulario" action="#" method="POST">
+
+                    <div class="campo">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="assunto">Assunto</label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="" disabled selected>Selecione um assunto</option>
+                            <option value="Sugestão">Sugestao de conteudo</option>
+                            <option value="Erro">Encontrei um erro</option>
+                            <option value="colaboração">Quero colaborar</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="botao-enviar">ENVIAR MENSAGEM</button>
+
+                </form>
+            </section>
+
+            <aside class="caixa-info">
+                <h3>Informacoes de Contato</h3>
+
+                <div class="item-info">
+                    <span class="icone-info">📍</span>
+                    <div>
+                        <strong>Endereço</strong>
+                        <span>Rua Umbrella, 1998 - Raccoon City, EUA</span>
+                    </div>
+                </div>
+
+                <div class="item-info">
+                    <span class="icone-info">✉️</span>
+                    <div>
+                        <strong>E-mail</strong>
+                        <span>contato@residientevil-fansite.com</span>
+                    </div>
+                </div>
+
+                <div class="item-info">
+                    <span class="icone-info">🕐</span>
+                    <div>
+                        <strong>Horario de Atendimento</strong>
+                        <span>Segunda a Sexta das 10h ate 22h</span>
+                    </div>
+                </div>
+
+                <div class="item-info">
+                    <span class="icone-info">⏱</span>
+                    <div>
+                        <strong>Tempo de Resposta</strong>
+                        <span>Ate 48 horas uteis</span>
+                    </div>
+                </div>
+
+                <p class="titulo-redes">Redes Sociais</p>
+                <ul class="lista-redes">
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">TikTok</a></li>
+                </ul>
+            </aside>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-colunas">
+
+            <div class="footer-marca">
+                <h3>☣ Resident Evil Fan Site</h3>
+                <p>Site criado como trabalho da faculdade. Não e afiliado a Capcom de forma alguma.
+                   Resident Evil e marca registrada da Capcom Co., Ltd.</p>
+            </div>
+
+            <div class="footer-coluna">
+                <h4>Paginas</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="personagens.html">Personagens</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-coluna">
+                <h4>Jogos</h4>
+                <ul>
+                    <li><a href="#">RE2 Remake (2019)</a></li>
+                    <li><a href="#">RE Village (2021)</a></li>
+                    <li><a href="#">RE4 Remake (2023)</a></li>
+                    <li><a href="#">RE7 Biohazard</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-copy">
+            <p>© 2025 Meu Site de Resident Evil - Trabalho Faculdade</p>
+        </div>
+    </footer>
+
+</body>
+</html>

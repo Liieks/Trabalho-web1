@@ -1,0 +1,789 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --vermelho: #cc0000;
+    --vermelho-escuro: #8b0000;
+    --preto: #000000;
+    --preto-nao-tao-preto: #1a1a1a;
+    --cinza: #555555;
+    --cinza-claro: #aaaaaa;
+    --branco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--preto);
+    color: var(--branco);
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+}
+
+header {
+    background-color: #0d0d0d;
+    border-bottom: 3px solid var(--vermelho);
+    padding: 15px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-family: 'Creepster', cursive;
+    color: var(--vermelho);
+    font-size: 32px;
+    text-shadow: 2px 2px 8px #cc0000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 15px;
+    border: 1px solid var(--vermelho);
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: var(--vermelho);
+    color: var(--branco);
+}
+
+nav ul li a:active {
+    background-color: var(--vermelho-escuro);
+}
+
+#banner {
+    background-color: #1a0000;
+    background-image: url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 3px solid var(--vermelho);
+}
+
+.overlay-banner {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 60px 40px;
+    width: 100%;
+}
+
+#banner h2 {
+    font-family: 'Creepster', cursive;
+    font-size: 64px;
+    color: var(--vermelho);
+    text-shadow: 3px 3px 10px black;
+    margin-bottom: 15px;
+}
+
+#banner p {
+    font-size: 20px;
+    color: var(--cinza-claro);
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+}
+
+.botao-vermelho {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.botao-vermelho:hover {
+    background-color: var(--vermelho-escuro);
+    color: var(--branco);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+#layout-principal {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        "historia curiosidades"
+        "jogos curiosidades";
+    gap: 30px;
+    margin-top: 30px;
+}
+
+#historia {
+    grid-area: historia;
+    background-color: var(--preto-nao-tao-preto);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid var(--vermelho);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+#historia h2 {
+    color: var(--vermelho);
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+#historia h3 {
+    color: var(--cinza-claro);
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+#historia p {
+    color: var(--cinza-claro);
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.lista-historia {
+    list-style: disc;
+    padding-left: 20px;
+    color: var(--cinza-claro);
+}
+
+.lista-historia li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+#curiosidades {
+    grid-area: curiosidades;
+    background-color: var(--preto-nao-tao-preto);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--vermelho);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    height: fit-content;
+}
+
+#curiosidades h3 {
+    color: var(--vermelho);
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 1px solid var(--vermelho);
+    padding-bottom: 10px;
+}
+
+.lista-curiosidades {
+    list-style: none;
+    color: var(--cinza-claro);
+}
+
+.lista-curiosidades li {
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.lista-curiosidades li:last-child {
+    border-bottom: none;
+}
+
+#jogos {
+    grid-area: jogos;
+}
+
+#jogos h2 {
+    color: var(--vermelho);
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.cards-jogos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.card {
+    background-color: var(--preto-nao-tao-preto);
+    border: 1px solid #333333;
+    border-radius: 8px;
+    flex: 1 1 200px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--vermelho);
+}
+
+.card-sem-imagem {
+    width: 100%;
+    height: 160px;
+    background: linear-gradient(135deg, #1a0000, #330000);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Creepster', cursive;
+    font-size: 28px;
+    color: var(--vermelho);
+}
+
+.card-corpo {
+    padding: 15px;
+}
+
+.card h3 {
+    color: var(--branco);
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: var(--cinza-claro);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#secao-personagens {
+    margin-top: 20px;
+}
+
+#secao-personagens h2 {
+    color: var(--vermelho);
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.grade-personagens {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.card-personagem {
+    background-color: var(--preto-nao-tao-preto);
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: border-color 0.3s;
+}
+
+.card-personagem:hover {
+    border-color: var(--vermelho);
+}
+
+.foto-placeholder {
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(180deg, #1a0000 0%, #330000 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 72px;
+    color: var(--vermelho);
+    font-family: 'Creepster', cursive;
+}
+
+.info-personagem {
+    padding: 20px;
+}
+
+.info-personagem h3 {
+    color: var(--branco);
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.cargo-personagem {
+    color: var(--vermelho);
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.info-personagem p {
+    color: var(--cinza-claro);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.habilidades {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.habilidades li {
+    background-color: rgba(204, 0, 0, 0.2);
+    border: 1px solid var(--vermelho);
+    color: var(--cinza-claro);
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.habilidades li:hover {
+    background-color: var(--vermelho);
+    color: var(--branco);
+}
+
+.secao-tabela {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.secao-tabela h2 {
+    color: var(--vermelho);
+    font-size: 26px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.wrapper-tabela {
+    overflow-x: auto;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+thead tr {
+    background-color: var(--vermelho);
+}
+
+thead th {
+    color: var(--branco);
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+tbody tr {
+    background-color: var(--preto-nao-tao-preto);
+    border-bottom: 1px solid #333;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #222222;
+}
+
+tbody tr:hover {
+    background-color: rgba(204, 0, 0, 0.15);
+}
+
+tbody td {
+    padding: 12px 15px;
+    color: var(--cinza-claro);
+}
+
+tbody td:first-child {
+    color: var(--branco);
+    font-weight: bold;
+}
+
+.secao-populares {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.secao-populares h2 {
+    color: var(--vermelho);
+    font-size: 26px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.secao-populares p {
+    color: var(--cinza-claro);
+    margin-bottom: 15px;
+}
+
+.lista-populares {
+    list-style: decimal;
+    padding-left: 25px;
+    color: var(--cinza-claro);
+}
+
+.lista-populares li {
+    padding: 10px;
+    margin-bottom: 6px;
+    background-color: var(--preto-nao-tao-preto);
+    border-radius: 5px;
+    border-left: 3px solid var(--vermelho);
+    font-size: 15px;
+    transition: background-color 0.2s;
+}
+
+.lista-populares li:hover {
+    background-color: #2a0000;
+    color: var(--branco);
+}
+
+.secao-formulario {
+    margin-top: 20px;
+}
+
+.secao-formulario h2 {
+    color: var(--vermelho);
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.secao-formulario > p {
+    color: var(--cinza-claro);
+    margin-bottom: 25px;
+}
+
+#meu-formulario {
+    background-color: var(--preto-nao-tao-preto);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    color: var(--cinza-claro);
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    background-color: #111111;
+    border: 1px solid #444444;
+    border-radius: 5px;
+    color: var(--branco);
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    padding: 10px 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: var(--vermelho);
+    box-shadow: 0 0 0 3px rgba(204,0,0,0.2);
+}
+
+.campo textarea {
+    height: 140px;
+    resize: vertical;
+}
+
+.campo select option {
+    background-color: #111;
+}
+
+.botao-enviar {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 0;
+    text-transform: uppercase;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.botao-enviar:hover {
+    background-color: var(--vermelho-escuro);
+}
+
+#layout-contato {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 30px;
+    margin-top: 20px;
+    align-items: start;
+}
+
+.caixa-info {
+    background-color: var(--preto-nao-tao-preto);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.caixa-info h3 {
+    color: var(--vermelho);
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 12px;
+}
+
+.item-info {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+    align-items: flex-start;
+}
+
+.icone-info {
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.item-info strong {
+    display: block;
+    color: var(--cinza-claro);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+}
+
+.item-info span {
+    color: var(--branco);
+    font-size: 14px;
+}
+
+.titulo-redes {
+    color: var(--cinza);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+}
+
+.lista-redes {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.lista-redes li a {
+    background-color: rgba(204,0,0,0.15);
+    border: 1px solid rgba(204,0,0,0.4);
+    border-radius: 20px;
+    color: var(--cinza-claro);
+    font-size: 13px;
+    padding: 5px 14px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.lista-redes li a:hover {
+    background-color: var(--vermelho);
+    color: var(--branco);
+}
+
+footer {
+    background-color: #0d0d0d;
+    border-top: 3px solid var(--vermelho);
+    padding: 40px 20px 20px 20px;
+    margin-top: 60px;
+}
+
+.footer-colunas {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-marca h3 {
+    font-family: 'Creepster', cursive;
+    color: var(--vermelho);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-marca p {
+    color: var(--cinza);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.footer-coluna h4 {
+    color: var(--vermelho);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.footer-coluna ul {
+    list-style: none;
+}
+
+.footer-coluna ul li {
+    margin-bottom: 8px;
+}
+
+.footer-coluna ul li a {
+    color: var(--cinza);
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-coluna ul li a:hover {
+    color: var(--branco);
+}
+
+.footer-copy {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid #222;
+    padding-top: 20px;
+    text-align: center;
+    color: var(--cinza);
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #banner {
+        min-height: 350px;
+    }
+
+    #banner h2 {
+        font-size: 40px;
+    }
+
+    #layout-principal {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "historia"
+            "jogos"
+            "curiosidades";
+    }
+
+    .cards-jogos {
+        flex-direction: column;
+    }
+
+    .grade-personagens {
+        grid-template-columns: 1fr;
+    }
+
+    #layout-contato {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-colunas {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-marca {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 480px) {
+    nav h1 {
+        font-size: 22px;
+    }
+
+    #banner h2 {
+        font-size: 30px;
+    }
+
+    #banner p {
+        font-size: 15px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+
+    .grade-personagens {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-colunas {
+        grid-template-columns: 1fr;
+    }
+
+    #meu-formulario {
+        padding: 20px 15px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+}
